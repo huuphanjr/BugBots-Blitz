@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gridworld">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Battle Bug Project/BattleBugs/gridworld.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

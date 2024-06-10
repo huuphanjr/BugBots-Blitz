@@ -1,0 +1,50 @@
+/* 
+ * AP(r) Computer Science GridWorld Case Study:
+ * Copyright(c) 2005-2006 Cay S. Horstmann (http://horstmann.com)
+ *
+ * This code is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation.
+ *
+ * This code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * @author Cay Horstmann
+ */
+
+package info.gridworld.actor;
+
+import java.awt.Color;
+
+
+
+public class Flower extends Actor
+{
+    private static final Color DEFAULT_COLOR = Color.PINK;
+    private static final double DARKENING_FACTOR = 0.05;
+
+
+    public Flower()
+    {
+        setColor(DEFAULT_COLOR);
+    }
+
+
+    public Flower(Color initialColor)
+    {
+        setColor(initialColor);
+    }
+
+
+    public void act()
+    {
+        Color c = getColor();
+        int red = (int) (c.getRed() * (1 - DARKENING_FACTOR));
+        int green = (int) (c.getGreen() * (1 - DARKENING_FACTOR));
+        int blue = (int) (c.getBlue() * (1 - DARKENING_FACTOR));
+
+        setColor(new Color(red, green, blue));
+    }
+}
